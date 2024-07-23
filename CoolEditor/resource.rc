@@ -1,0 +1,6 @@
+aaaa ICON "wx/msw/std.ico"
+
+#include "wx/msw/wx.rc"
+// #include "winres.h"
+
+// 1 RT_MANIFEST "app.manifest"

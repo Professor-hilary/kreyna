@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<object class="wxFrame" name="CoolEditorFrame">
+		<title>Kreyna</title>
+		<centered>1</centered>
+		<size>980,500</size>
+		<id_arg>0</id_arg>
+		<style>wxDEFAULT_FRAME_STYLE|wxSYSTEM_MENU|wxMAXIMIZE_BOX|wxMINIMIZE_BOX</style>
+		<object class="wxAuiManager" variable="ParentAuiManager" member="yes">
+			<object class="AuiManagerItem">
+				<object class="wxAuiNotebook" name="ID_AUINOTEBOOK3" variable="AuiNotebookConsolePane" member="yes">
+					<size>0,300</size>
+					<style>wxAUI_NB_WINDOWLIST_BUTTON</style>
+					<object class="AuiNotebookPage">
+						<object class="wxTextCtrl" name="ID_TEXTCTRL1" variable="controlTextCtrl" member="yes">
+							<value>PS C:\\Users\\home&gt; </value>
+							<style>wxTE_PROCESS_ENTER|wxTE_AUTO_URL|wxTE_CHARWRAP|wxBORDER_NONE</style>
+						</object>
+						<label>Console</label>
+					</object>
+				</object>
+				<name>ConsolePane</name>
+				<caption>Logs</caption>
+				<maximizebutton>0</maximizebutton>
+				<pinbutton>0</pinbutton>
+				<position>1</position>
+				<dockdirection>Bottom</dockdirection>
+				<dockfixed>0</dockfixed>
+				<dockabledirection>.TopDockable(false)</dockabledirection>
+				<firstadd>0</firstadd>
+			</object>
+			<object class="AuiManagerItem">
+				<object class="wxAuiNotebook" name="ID_AUINOTEBOOK4" variable="AuiNotebookToolBar" member="yes">
+					<size>0,150</size>
+					<style>wxAUI_NB_WINDOWLIST_BUTTON|wxBORDER_NONE|wxCLIP_CHILDREN|wxFULL_REPAINT_ON_RESIZE</style>
+					<object class="AuiNotebookPage">
+						<object class="wxPanel" name="ID_PANEL_HOME" variable="PanelHome" member="yes">
+							<style>wxTAB_TRAVERSAL|wxCLIP_CHILDREN</style>
+						</object>
+						<label>Home</label>
+						<selected>1</selected>
+					</object>
+					<object class="AuiNotebookPage">
+						<object class="wxPanel" name="ID_PANEL_EDIT" variable="PanelEdit" member="yes" />
+						<label>Edit</label>
+					</object>
+					<object class="AuiNotebookPage">
+						<object class="wxPanel" name="ID_PANEL_VIEW" variable="PanelView" member="yes" />
+						<label>View</label>
+					</object>
+					<object class="AuiNotebookPage">
+						<object class="wxPanel" name="ID_PANEL_LAYOUT" variable="PanelLayout" member="yes" />
+						<label>Layout</label>
+					</object>
+					<object class="AuiNotebookPage">
+						<object class="wxPanel" name="ID_PANEL_PROJECT" variable="PanelProject" member="yes" />
+						<label>Project</label>
+					</object>
+					<object class="AuiNotebookPage">
+						<object class="wxPanel" name="ID_PANEL_BUILD" variable="PanelBuild" member="yes" />
+						<label>Build</label>
+					</object>
+					<object class="AuiNotebookPage">
+						<object class="wxPanel" name="ID_PANEL_DEBUG" variable="PanelDebug" member="yes" />
+						<label>Debug</label>
+					</object>
+					<object class="AuiNotebookPage">
+						<object class="wxPanel" name="ID_PANEL_EDITOR" variable="PanelEditor" member="yes" />
+						<label>Editor</label>
+					</object>
+					<object class="AuiNotebookPage">
+						<object class="wxPanel" name="ID_PANEL_SETTING" variable="PanelSetting" member="yes" />
+						<label>Settings</label>
+					</object>
+					<object class="AuiNotebookPage">
+						<object class="wxPanel" name="ID_PANEL_HELP" variable="PanelHelp" member="yes" />
+						<label>Help</label>
+					</object>
+				</object>
+				<name>ToolBar</name>
+				<standardpanetype>Default</standardpanetype>
+				<caption>Tool Bar</caption>
+				<captionvisible>0</captionvisible>
+				<minimizebutton>0</minimizebutton>
+				<maximizebutton>0</maximizebutton>
+				<layer>1</layer>
+				<dockabledirection></dockabledirection>
+				<destroyonclose>0</destroyonclose>
+				<firstadd>0</firstadd>
+			</object>
+			<object class="AuiManagerItem">
+				<object class="wxAuiNotebook" name="ID_AUINOTEBOOK2" variable="AuiNotebookManagement" member="yes">
+					<size>300,0</size>
+					<style>wxAUI_NB_SCROLL_BUTTONS|wxAUI_NB_WINDOWLIST_BUTTON</style>
+					<object class="AuiNotebookPage">
+						<object class="wxPanel" name="ID_PANEL2" variable="Panel2" member="yes">
+							<pos>-3,-50</pos>
+							<object class="wxBoxSizer" variable="BoxSizer1" member="no">
+								<orient>wxVERTICAL</orient>
+								<object class="sizeritem">
+									<object class="wxDirPickerCtrl" name="ID_DIRPICKERCTRL1" variable="DirPickerCtrl1" member="yes">
+										<message></message>
+										<path>C:\\Users\\home\\Documents</path>
+										<style>wxDIRP_DIR_MUST_EXIST|wxDIRP_USE_TEXTCTRL|wxDIRP_SMALL</style>
+										<handler function="OnDirPickerCtrlDirChanged" entry="EVT_DIRPICKER_CHANGED" />
+									</object>
+									<flag>wxALL|wxEXPAND</flag>
+									<border>5</border>
+								</object>
+								<object class="sizeritem">
+									<object class="wxTreeCtrl" name="ID_TREECTRL_FILELIST" variable="treeCtrl" member="yes">
+										<image_list></image_list>
+										<tree_items>
+											<item>treeCtrl</item>
+											<item></item>
+										</tree_items>
+										<items_text>
+											<item2>treeCtrl</item2>
+											<item2></item2>
+										</items_text>
+										<style>wxTR_HAS_BUTTONS|wxTR_TWIST_BUTTONS|wxTR_LINES_AT_ROOT|wxTR_DEFAULT_STYLE</style>
+									</object>
+									<flag>wxALL|wxEXPAND</flag>
+									<border>5</border>
+									<option>1</option>
+								</object>
+							</object>
+						</object>
+						<label>Files</label>
+					</object>
+				</object>
+				<name>LeftPane</name>
+				<caption>Management</caption>
+				<minimizebutton>0</minimizebutton>
+				<maximizebutton>0</maximizebutton>
+				<pinbutton>0</pinbutton>
+				<layer>1</layer>
+				<dockdirection>Left</dockdirection>
+				<dockfixed>0</dockfixed>
+				<dockabledirection>.TopDockable(false)</dockabledirection>
+				<destroyonclose>0</destroyonclose>
+				<firstadd>0</firstadd>
+			</object>
+			<object class="AuiManagerItem">
+				<object class="wxAuiNotebook" name="ID_AUINOTEBOOK1" variable="AuiNotebookEditors" member="yes">
+					<style>wxAUI_NB_SCROLL_BUTTONS|wxAUI_NB_WINDOWLIST_BUTTON|wxAUI_NB_DEFAULT_STYLE</style>
+				</object>
+				<name>MainViewPane</name>
+				<caption>Editors</caption>
+				<pinbutton>0</pinbutton>
+				<closebutton>0</closebutton>
+				<dockdirection>Center</dockdirection>
+				<dockabledirection>.TopDockable(false)</dockabledirection>
+				<firstadd>0</firstadd>
+			</object>
+			<object class="AuiManagerItem">
+				<object class="wxAuiNotebook" name="ID_AUINOTEBOOK5" variable="AuiNotebookAside" member="yes">
+					<size>300,0</size>
+					<style>wxAUI_NB_WINDOWLIST_BUTTON|wxFULL_REPAINT_ON_RESIZE</style>
+					<object class="AuiNotebookPage">
+						<object class="wxPanel" name="ID_PANEL1" variable="Panel1" member="yes">
+							<pos>19,270</pos>
+						</object>
+						<label>Aside</label>
+					</object>
+				</object>
+				<name>Aside</name>
+				<caption>Side Pane</caption>
+				<closebutton>0</closebutton>
+				<dockdirection>Right</dockdirection>
+				<dockfixed>0</dockfixed>
+				<dockabledirection>.TopDockable(false)</dockabledirection>
+				<destroyonclose>0</destroyonclose>
+				<firstadd>0</firstadd>
+			</object>
+		</object>
+		<object class="wxStatusBar" name="ID_STATUSBAR1" variable="StatusBar1" member="yes">
+			<fields>1</fields>
+			<widths>-1</widths>
+			<styles>wxSB_NORMAL</styles>
+		</object>
+	</object>
+</wxsmith>
